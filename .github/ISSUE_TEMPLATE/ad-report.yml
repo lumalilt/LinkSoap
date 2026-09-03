@@ -1,0 +1,79 @@
+name: Report an ad
+description: Report an inappropriate or age-inappropriate ad shown in LinkSoap.
+title: "ad: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep LinkSoap's advertising appropriate.
+
+        **This report will be public. Do not include personal information, private links, email addresses, account details, advertising identifiers, or unredacted screenshots containing private information.**
+
+        Describe the ad itself and provide only the minimum information needed to identify it. If your report contains sensitive information, do not submit this public form; use the private contact method listed on [LinkSoap Support](https://lumalilt.com/products/LinkSoap/support).
+
+  - type: dropdown
+    id: concern
+    attributes:
+      label: Type of concern
+      description: Choose the best description of the problem.
+      options:
+        - Age-inappropriate
+        - Sexually explicit or suggestive
+        - Violent, hateful, or abusive
+        - Misleading, fraudulent, or unsafe
+        - Otherwise inappropriate
+    validations:
+      required: true
+
+  - type: input
+    id: advertiser
+    attributes:
+      label: Advertiser or product
+      description: Enter the advertiser, product, or organization named in the ad, if visible.
+      placeholder: Advertiser or product name
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the ad and concern
+      description: Describe what appeared and why it was inappropriate. Do not include personal information.
+      placeholder: Describe the ad and the reason it should be reviewed.
+    validations:
+      required: true
+
+  - type: input
+    id: destination
+    attributes:
+      label: Advertised destination domain
+      description: If known, provide only the destination domain—not a full URL containing tracking or personal information.
+      placeholder: example.com
+
+  - type: input
+    id: occurrence
+    attributes:
+      label: Approximate date, time, and time zone
+      description: This can help identify the ad request without requiring personal information.
+      placeholder: September 3, 2026 around 11:30 AM Eastern
+
+  - type: input
+    id: version
+    attributes:
+      label: LinkSoap version and build
+      description: Find these values at the bottom of LinkSoap Settings.
+      placeholder: Version 1.0, build 29
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Redacted screenshot or additional context
+      description: Optional. Attach a screenshot only after removing notifications, names, addresses, URLs, and other personal information.
+
+  - type: checkboxes
+    id: public_acknowledgement
+    attributes:
+      label: Public report acknowledgement
+      options:
+        - label: I understand that this report and its attachments will be public, and I have not included personal or sensitive information.
+          required: true
