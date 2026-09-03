@@ -24,5 +24,4 @@ Please include:
 
 ## Scope notes
 
-- Public repo issues can include packaging, release automation, updater metadata, GUI/CLI behavior, and other public-source concerns.
-- Store credentials, signing certificates, and other protected release secrets must never be included in reports or logs.
+- Store credentials, signing certificates, and other protected secrets must never be included in reports or logs.
