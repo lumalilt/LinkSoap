@@ -1,0 +1,64 @@
+name: Bug report
+description: Report a reproducible defect in the public GUI, CLI, packaging, or release flow.
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for public-source issues in the GUI, CLI, packaging scripts, updater metadata, or release automation.
+        Do not include secrets, license keys, certificates, or vulnerability details here.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: App version, release tag, or commit.
+      placeholder: 1.0.9
+    validations:
+      required: true
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Install channel
+      options:
+        - Direct installer
+        - Portable zip
+        - Microsoft Store
+        - Source build
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Logs, screenshots, and notes that are safe to share publicly.
